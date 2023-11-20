@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Usuarios</title>
+    <meta name="description" content="Anuncio de clases de programación en Python">
+    <meta name="keywords" content="Python, programación, clases">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/test.css' %}"> {% endcomment %}
+    <link href="{%static 'css/test.css'%}" rel="stylesheet">
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+</head>
+
+<body>
+   
+    <header>
+        <h1>Lista de Usuarios de mi Aplicación</h1>
+        <a href="{%url "index_formulario"%}" class="btn btn-light">Insertar Nuevo</a>
+    </header>
+    
+    <div class="container">
+      <table class="table table-sm">
+        <thead>
+      <tr>            
+        <th scope="col">Nombre</th>
+        <th scope="col">Documento</th>
+        <th scope="col">Ficha</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% comment %} {% block  content %}  {% endcomment %}
+        {% for usr in get_usuarios%}
+      <tr>
+                                            
+        <td>{{usr.nombre}}</td>
+        <td>{{usr.documento}}</td>
+        <td>{{usr.ficha}}</td>
+        <td ><img src="{{usr.photo.url}}" width="40" height="40"></td>
+      </tr>
+      {%endfor%}      
+      {% comment %} {% endblock  content %}  {% endcomment %}
+    </tbody>      
+    </table>
+    
+    </div>
+</body>
+
+</html>

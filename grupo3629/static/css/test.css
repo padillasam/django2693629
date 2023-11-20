@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a.python-logo {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+a.python-logo img {
+    width: 100px; /* Ajusta el ancho de la imagen según tus preferencias */
+    height: auto;
+}
+
+.table {
+    list-style: none;
+    padding: 0;
+}
+
+.table li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 115, 230, 0.2);
+}
+
+.topic {
+    flex: 2;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.description {
+    flex: 3;
+    color: #555;
+}
+
+.container p:last-child {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Usuarios</title>
+    <meta name="description" content="Anuncio de clases de programación en Python">
+    <meta name="keywords" content="Python, programación, clases">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/test.css' %}"> {% endcomment %}
+    <link href="{%static 'css/test.css'%}" rel="stylesheet">
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Lista de Usuarios de mi Aplicación</h1>
+    </header>
+    {%for user in get_usuarios%}
+        {{user.nombre}}
+    {%endfor%}
+
+
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Ficha</th>
+                <th scope="col">Foto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Juana de Arco</th>
+                <td>1234</td>
+                <td>2693629</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">Pedro Infante</th>
+                <td>54321</td>
+                <td>2693630</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">Julio Iglesias</th>
+                <td>112233</td>
+                <td>2693630</td>
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>

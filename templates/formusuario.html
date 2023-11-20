@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Usuarios</title>
+    <meta name="keywords" content="Python, programación, clases">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/test.css' %}"> {% endcomment %}
+    <link href="{%static 'css/test.css'%}" rel="stylesheet">
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+</head>
+
+<body>
+   
+    <header>
+        <h1>Formulario Ingreso Nuevo Usuario</h1>        
+    </header>
+        
+        <div class="container">
+            <form action="{% url "procesar_formulario" %}" enctype="multipart/form-data" method="POST" >
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>            
+                {% comment %} <button type="submit" name="regresar" class="btn btn-primary">Regresar</button> {% endcomment %}
+                {% comment %} <button type="submit" name="regresar" class="btn btn-primary" onclick="history.back()">Regresar</button> {% endcomment %}
+                <a href="{%url 'usuario_list'%}" class="btn btn-primary">regresar</a>
+                <a href="{%url 'home'%}" class="btn btn-primary">home</a>
+            </form>
+            
+        </div>
+            
+</body>
+
+</html>
+
+    
+

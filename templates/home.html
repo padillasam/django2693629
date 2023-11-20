@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clases de Programación en Python</title>
+    <meta name="description" content="Anuncio de clases de programación en Python">
+    <meta name="keywords" content="Python, programación, clases">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/test.css' %}"> {% endcomment %}
+    <link href="{%static 'css/test.css'%}" rel="stylesheet">
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <h1>Clases de Programación en Python</h1>
+    </header>
+    <div class="container">
+        <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" alt="Logo de Python" class="python-logo" width="200px">
+        <!-- <a href="https://www.python.org/">
+           
+        </a> -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">ADSO 2693629</h5>
+              <p class="card-text">Estamos aprendiendo Django, el framework mas utilizado de python para la web.</p>
+              <a href="{%url 'usuario_list'%}" class="btn btn-primary">ususarios</a>
+            </div>
+          </div>
+
+        <p>¡Aprende a programar en Python con nuestras clases especializadas! Ya sea que seas un principiante o un programador experimentado, nuestras clases te ayudarán a mejorar tus habilidades en Python.</p>
+        <p>Temas que cubrimos:</p>
+        <ul class="table">
+            <li>
+                <div class="topic">Sintaxis de Python</div>
+                <div class="description">Aprende las bases de la sintaxis de Python y cómo escribir código Python limpio y legible.</div>
+            </li>
+            <li>
+                <div class="topic">Programación orientada a objetos</div>
+                <div class="description">Comprende los conceptos de la programación orientada a objetos y cómo aplicarlos en Python.</div>
+            </li>
+            <li>
+                <div class="topic">Manejo de excepciones</div>
+                <div class="description">Domina cómo manejar errores y excepciones en Python para escribir código robusto.</div>
+            </li>
+            <li>
+                <div class="topic">Desarrollo web con Flask y Django</div>
+                <div class="description">Aprende a crear aplicaciones web utilizando los populares frameworks Flask y Django.</div>
+            </li>
+            <li>
+                <div class="topic">Análisis de datos con Pandas y NumPy</div>
+                <div class="description">Descubre cómo utilizar Pandas y NumPy para el análisis de datos y la manipulación de tablas de datos en Python.</div>
+            </li>
+        </ul>
+        <p>No esperes más para empezar. ¡Inscríbete ahora y comienza tu viaje de programación en Python!</p>
+        <p>Para más información, contáctanos en <a href="mailto:tucorreo@example.com">tucorreo@example.com</a></p>
+    </div>
+</body>
+</html>
