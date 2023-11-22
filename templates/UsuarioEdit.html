@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{% comment %} {%extends 'home.html'%} {% endcomment %}
+
+
+{% block main %}
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        This is a danger alert checkout
+    </div>
+    {% endif %}
+
+    <h1>Edicion de Usuarios</h1>
+    <form action="{% url "actualizar_usuario" usuario.id %}" method="POST" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if mensaje %}
+        
+            <div class="alert alert-success" role="alert">
+            Usuario actualizado Exitosamente
+            </div>
+        {% endif %}
+        
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>    
+{% endblock main %}
